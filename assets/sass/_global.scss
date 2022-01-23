@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+ body{
+     font-size: 16px;
+     font-family: 'Lato', sans-serif;
+     line-height: 1.8;
+     background-color: #f0f0f0;
+     scroll-behavior: smooth;
+ }
+ 
+ .page-scroll{
+     width: 30px;
+     height: 30px;
+     background-color: $brown-color;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 100%;
+     position: fixed;
+     right: 10px;
+     bottom: 5%;
+     cursor: pointer;
+     transform: translateX(100px);
+     transition: 0.5s;
+ }
+ .hydrated {
+    visibility: visible;
+}   
+ .page-scroll.active{
+     transform: translateX(0);
+ }
+ .btn-read-more,
+.btn-buy-now{
+        width: 160px;
+        background-color: $brown-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $dark-color-text;
+        box-shadow: inset 0 0 0 0 #333;
+        transition: ease-out 0.5s ;
+        position: relative;
+
+       
+    }
+    .btn-read-more{
+        padding: 14px 17px 14px 25px;
+        margin-right: 31px;
+    }
+    .btn-buy-now{
+        padding: 14px 25px 14px 39px;
+    }
+    .btn-white{
+        background-color: white;
+        margin-right: 0;
+    }
+
+// btn effect
+.btn-effect span{
+    position: absolute;
+    display: block;
+    background-color: $brown-color;
+    
+}
+.btn-effect span:nth-child(1){
+    left:0;
+    bottom: 0;
+    height: 100%;
+    width: 1px ;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+.btn-effect:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.btn-effect span:nth-child(2){
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 1px ;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+   
+}
+.btn-effect:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    
+}
+.btn-effect span:nth-child(3){
+    right:0;
+    bottom: 0;
+    height: 100%;
+    width:  1px ;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    /* transition-delay: 0.5s; */
+    
+}
+.btn-effect:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    /* transition-delay: 0.5s; */
+    
+}
+.btn-effect span:nth-child(4){
+    top:0;
+    left: 0;
+    width:  100%;
+    height:  1px ;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+    /* transition-delay: 0.5s; */
+   
+}
+.btn-effect:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: right    ;
+    transition: transform 0.5s;
+    /* transition-delay: 0.5s; */
+    
+}
+// sub-menu
+.sub-menu {
+    width: 25px;
+    position: absolute;
+    right: 30px;
+    
+    top: 15px;
+    z-index: 999;
+    display: none;
+}
+.sub-menu div {
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    margin: 5px;
+    transition: transform 0.5s linear;
+}
+
+.isactive .line1 {
+    transform: rotate(-45deg)translate(-5px,6px);
+}
+.isactive .line2 {
+    opacity: 0;
+}
+.isactive .line3 {
+    transform: rotate(45deg)translate(-5px,-6px);
+}
+.slider-number,
+.break-slider-number{
+   
+        position: absolute;
+        font-family: "roboto",sans-serif;
+        z-index: 1;
+        
+        left:50.5%;
+        transform: translateX(-50%);
+        color: white;
+    
+}
+.slider-number{
+    bottom: 5%;
+}
+.break-slider-number{
+    bottom: 2%;
+}
+.slick-dots {
+    bottom: 10px;
+
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    padding-left: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.slick-dots li button:before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: #a39e9f;
+    opacity: 0.7;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    background-color: $brown-color;
+
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: unset !important;
+    background-color: unset;
+}
+  
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #c3a281 !important;
+    background-color: unset !important;
+}
+.tab-content > .tab-pane {
+    display: block;
+    visibility: hidden;
+    height: 0;
+
+}
+.tab-content > .active {
+      display: block;
+      height: auto;
+      visibility: visible;
+}
+.slick-next:before {
+    content: '>';
+}
+.slick-prev:before {
+    content: '<';
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: white;
+    outline: none;
+    background: $brown-color;
+}
+.slick-prev, .slick-next {
+    width: 50px;
+    height: 150px;
+    background-color: $brown-color;
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.slick-prev {
+    z-index: 999;
+    left: 0;
+}
+.slick-next {
+    
+    right: 0;
+}
+.slick-dots {
+
+    z-index: 99;
+}
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .embed-responsive::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+  .embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    height: 305px;
+}
+  .background-drop{
+    backdrop-filter: contrast(1.2) brightness(0.3) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+    padding: 70px 0 70px 0;
+            
+}
+

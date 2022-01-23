@@ -1,0 +1,202 @@
+.contact{
+    min-height: 855px;
+    position: relative;
+    padding: 80px 0;
+    &::before{
+        content: url('../image/Home/home_service_bg2.png');
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &-content{
+        &-title{
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $brown-color;
+            padding-bottom: 10px;
+            
+            border-bottom: 2px solid $brown-color;
+            margin-bottom: 15px;
+           
+        }
+        &-desc{
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+    &-map{
+        position: relative;
+        
+        img{
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+        &-ping1 ,
+        &-ping2 ,
+        &-ping3 {
+            position: absolute;
+            border-radius: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $brown-color;
+            color:white;
+            z-index: 2;
+        }
+        &-ping1{
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+        }
+        &-ping2{
+            top: 90px;
+            right: 192px;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height:20px;
+        }
+        &-ping3{
+            right: 35%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+
+        }
+    }
+    &-form{
+        width: 670px;
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 56%;
+        transform: translateY(-50%);
+        background-color: #c3a281;
+        color: white;
+        padding: 70px 70px;
+        input,textarea{
+            outline: none;
+            background-color: transparent;
+            border: 2px solid white;
+            transition: 0.5s;
+            width: 100%;
+            height: 100%;
+            color: white;
+            &::placeholder{
+                color: white;
+                padding:25px 0 0 15px;
+            }
+        }
+        &-btn{
+            padding: 16px 20px;
+            background-color: white;
+            width: max-content;
+            color: $dark-color-text;
+            font-size: 18px;
+            line-height: 1;
+            box-shadow: inset 0 0 0 0 $dark-color-text;
+            transition: ease-out 0.5s ;
+            cursor: pointer;
+            // border: 1px solid white;
+            text-decoration: none;
+            
+            span{
+               
+                margin-left: 25px;
+            }
+
+            &:hover{
+                color: $color-text;
+                box-shadow: inset 200px 0 0 0 $dark-color-text;
+           
+                
+            }
+        }
+    &-focus{
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &-textarea-focus{
+        position: relative;
+        height:auto;
+        margin-bottom: 20px;
+        
+    }
+
+    }
+
+
+}
+.effect{
+    position: relative;
+}
+.effect ~.focus-border:before,
+.effect ~.focus-border:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+    background-color: rgb(135, 136, 138);
+	transition: .2s;
+	transition-delay: .2s
+}
+
+.effect ~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: .6s
+}
+
+.effect ~.focus-border i:before,
+.effect ~.focus-border i:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: rgb(135, 136, 138);
+	transition: .2s
+}
+
+.effect ~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: .4s
+}
+
+.effect:focus~.focus-border:before,
+.effect:focus~.focus-border:after {
+	width: 100%;
+	transition: .2s;
+	transition-delay: .6s
+}
+
+.effect:focus~.focus-border:after {
+	transition-delay: .2s
+}
+
+.effect:focus~.focus-border i:before,
+.effect:focus~.focus-border i:after {
+	height: 100%;
+	transition: .2s
+}
+
+.effect:focus~.focus-border i:after {
+	transition-delay: .4s
+}

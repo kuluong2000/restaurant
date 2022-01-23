@@ -1,0 +1,74 @@
+.footer{
+    padding: 60px 0;
+    background: linear-gradient(to bottom , rgba(0,0,0,0.7), rgba(0,0,0,0.7))
+     ,url(../image/Home/home_footer.jpg) no-repeat center / cover;
+    min-height: 326px;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 2px solid $brown-color;
+        padding: 0 70px 20px 100px;
+        gap: 30px;
+        color: white;
+        &-item {
+           font-size: 15px;
+           display: flex;
+           flex-direction: column;
+           a{
+               text-decoration: none;
+               color: #9d9b9b;
+           }
+           
+        
+           &--social{
+               display: flex;
+               justify-content: space-between;
+               gap: 10px;
+               padding: 0 10px;
+               margin: 20px 0;
+           }
+           &--logo img{
+               width: 100%;
+
+           }
+        }
+        
+        &-item:nth-child(4){
+            max-width: 310px;
+        }
+        &-item:last-child {
+            transform: translateY(30px);
+        }
+        
+    }
+    &-menu{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+       
+        &-item{
+            vertical-align: top;
+            
+        }
+       
+        &-link{
+            text-transform: capitalize;
+            color: white !important;
+            text-decoration: none;
+            text-align: left;
+            &:hover{
+                color: $brown-color;
+            }
+        }
+        
+    }
+    &-copyright{
+        color: white;
+        margin-top: 15px;
+        margin-left: 100px;
+    }
+}
+
